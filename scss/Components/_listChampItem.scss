@@ -1,0 +1,98 @@
+.list-item-champion {
+  overflow: hidden;
+  position: relative;
+  height: 50rem;
+  box-shadow: 0 0 15px #111;
+  border: 1px solid #7E633B;
+  .avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    transition: all 0.4s ease;
+  }
+  &:hover img.avatar {
+    transform: scale(1.5);
+  }
+
+  .image-champion-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(transparent 30%, #000);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  &:hover .image-champion-overlay {
+    opacity: 1;
+  }
+
+  .info-champion {
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  .label-champion {
+    height: 200px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    background: $secondary-color;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    left: 0;
+    transition: all 0.4s ease;
+    clip-path: polygon(50% 52%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+    .name-champion {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--immutable-color);
+      margin-bottom: 10px;
+    }
+    .classify {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap:20px;
+      .tag-icon{
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: relative;
+        transition: all 0.2s ease;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+        &:hover::after{
+          content: attr(tagTitle);
+          color: white;
+          position: absolute;
+          background: #000;
+          padding: 5px;
+          border-radius: 3px;
+          font-size: 16px;
+          top: -20px;
+          left: 50%;
+          transform: translateX(-50%);
+          text-transform: capitalize;
+        } 
+      }
+    }
+  }
+
+  &:hover .label-champion {
+    bottom: 0px;
+  }
+}

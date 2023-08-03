@@ -1,0 +1,22 @@
+.next-button {
+  width: 200px;
+  height: 50px;
+  max-width: 200px;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #ecc572 0, #815500);
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--primary-color);
+  border: 1px solid #ecc572;
+  box-shadow: 1px 1px 20px black;
+  font-size: 1.6rem;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 3;
+  &:active {
+    background: transparent;
+  }
+  &:hover {
+    color: #ecc572;
+  }
+}

@@ -1,0 +1,14 @@
+.search-bar {
+    display: flex;
+
+    #txtSearch {
+      flex: 1;
+      outline: none;
+      font-size: 2rem;
+      background: $secondary-color;
+      border: 1px solid #7E633B;
+      color: white;
+      padding-left: 20px;
+      box-shadow: 0 0 15px #111;
+    }
+  }
